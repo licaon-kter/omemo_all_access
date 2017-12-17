@@ -19,3 +19,9 @@ Disco feature
 This modules annouces a disco feature on the account to allow external tools such as the Compliance Tester to check if this module has been installed.
 
 
+Compatibility
+=============
+
+  ----- -----------------------------------------------------------------------------
+  0.10  Works
+  ----- -----------------------------------------------------------------------------

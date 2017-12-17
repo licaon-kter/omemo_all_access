@@ -42,7 +42,7 @@ function on_pep_request(event)
 					session.send(stanza);
 					module:log("debug","provided access to omemo node",node)
 					return true;
-					end
+				end
 			end
 			module:log("debug","requested node was white listed", node)
 		end
