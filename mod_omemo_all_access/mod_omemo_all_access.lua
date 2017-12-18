@@ -12,9 +12,11 @@ local disco_feature_namespace = white_listed_namespace .. "whitelisted"
 local mod_pep = module:depends"pep";
 local pep_data = mod_pep.module.save().data;
 
-module:add_feature(disco_feature_namespace)
+local function on_account_disco_info(event)
+	(event.reply or event.stanza):tag("feature", {var=disco_feature_namespace}):up();
+end
 
-function on_pep_request(event)
+local function on_pep_request(event)
 	local session, stanza = event.origin, event.stanza
 	local payload = stanza.tags[1];
 	if stanza.attr.type == 'get' then
@@ -50,3 +52,4 @@ function on_pep_request(event)
 end
 
 module:hook("iq/bare/http://jabber.org/protocol/pubsub:pubsub", on_pep_request, 10);
+module:hook("account-disco-info", on_account_disco_info);
