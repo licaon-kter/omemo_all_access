@@ -1,7 +1,7 @@
 ---
 labels:
 - 'Stage-Alpha'
-summary: 'Disable access control for all OMEMO reladed PEP nodes'
+summary: 'Disable access control for all OMEMO related PEP nodes'
 ---
 
 Introduction
@@ -16,7 +16,7 @@ This module disables access control for all OMEMO PEP nodes (=all nodes in the n
 Disco feature
 =============
 
-This modules annouces a disco feature on the account to allow external tools such as the Compliance Tester to check if this module has been installed.
+This modules annouces a disco feature on the account to allow external tools such as the [Compliance Tester](https://conversations.im/compliance/) to check if this module has been installed.
 
 
 Compatibility
